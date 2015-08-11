@@ -134,7 +134,7 @@ var_dump($date1->format('Y-m-d H:i:s')); // string(19) "2015-01-31 22:29:30"
 
 Selain cara di atas, bisa juga menggunakan [`DateTime::modify()`](http://php.net/manual/en/datetime.modify.php).
 
-```
+```php
 <?php
 
 $date1 = new DateTime('2015-02-28');
