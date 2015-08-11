@@ -9,6 +9,7 @@ Bab ini menjelaskan mengapa harus move on ke object dan bagaimana caranya.
 Sering kali, kita menemui kebutuhan untuk memanipulasi tanggal sebelum menampilkannya dalam format tertentu.
 Meski *simpel* dan praktis dalam menampilkan tanggal, cara prosedural memiliki kesulitan dalam memanipulasinya.
 
+    ```php
     <?php
 
     // Cara menampilkan sebuah tanggal dalam berbagai format dengan cara prosedural
@@ -21,6 +22,7 @@ Meski *simpel* dan praktis dalam menampilkan tanggal, cara prosedural memiliki k
 
     $tglStr2 = date('d-m-Y H:i:s', $tgl);
     var_dump($tglStr2); // string(19) "01-01-2015 23:59:59"
+    ```
     
 Perhatikan kode di atas.
 Pada cara prosedural, `date()` mengembalikan string tanggal yang telah terformat, dari parameter berupa integer.
@@ -60,4 +62,34 @@ Apakah menggunakan operasi matematika, mencari tanggalnya lalu dikurangi 3?
 Dengan menggunakan `DateTime`, operasi tanggal dan waktu menjadi lebih *clean*, lebih mudah dibaca.
 Selain itu, karena telah berbentuk object, segala kelebihan *object oriented programming* juga dapat dimanfaatkan, seperti yang akan dijelaskan kemudian.
 
+
+### Membandingkan DateTime
+
+Membandingkan 2 tanggal menggunakan `DateTime` cukup mudah dan enak dibaca.
+
+    <?php
+
+    $date1 = new DateTime('2 Jan 2015');
+    $date2 = new DateTime('1 Feb 2015');
+
+    var_dump($date1 == $date2); // bool(false)
+    var_dump($date1 < $date2);  // bool(true)
+
+    if ($date2 > $date1) {
+        echo $date2->format('Y-m-d H:i:s') 
+            . ' lebih besar dari ' . $date1->format('Y-m-d H:i:s') . "\n";
+        // 2015-02-01 00:00:00 lebih besar dari 2015-01-02 00:00:00
+    }
+
+
+
+### Selisih Waktu
+
+Untuk mencari selisih antara 2 tanggal juga sangat mudah.
+
+<<(code/modern-php/datetime/datetime-diff.php)
+
+I> `DateTime::diff()` mengembalikan object [DateInterval](http://php.net/manual/en/class.dateinterval.php) yang akan dibahas kemudian.
+
+{pagebreak}
 
