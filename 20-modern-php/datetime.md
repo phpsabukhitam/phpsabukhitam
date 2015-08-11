@@ -9,20 +9,20 @@ Bab ini menjelaskan mengapa harus move on ke object dan bagaimana caranya.
 Sering kali, kita menemui kebutuhan untuk memanipulasi tanggal sebelum menampilkannya dalam format tertentu.
 Meski *simpel* dan praktis dalam menampilkan tanggal, cara prosedural memiliki kesulitan dalam memanipulasinya.
 
-    ```php
-    <?php
+```php
+<?php
 
-    // Cara menampilkan sebuah tanggal dalam berbagai format dengan cara prosedural
+// Cara menampilkan sebuah tanggal dalam berbagai format dengan cara prosedural
 
-    $tgl = mktime(23, 59, 59, 1, 1, 2015);
-    var_dump($tgl); // int(1420131599)
+$tgl = mktime(23, 59, 59, 1, 1, 2015);
+var_dump($tgl); // int(1420131599)
 
-    $tglStr1 = date('Y-m-d H:i:s', $tgl);
-    var_dump($tglStr1); // string(19) "2015-01-01 23:59:59"
+$tglStr1 = date('Y-m-d H:i:s', $tgl);
+var_dump($tglStr1); // string(19) "2015-01-01 23:59:59"
 
-    $tglStr2 = date('d-m-Y H:i:s', $tgl);
-    var_dump($tglStr2); // string(19) "01-01-2015 23:59:59"
-    ```
+$tglStr2 = date('d-m-Y H:i:s', $tgl);
+var_dump($tglStr2); // string(19) "01-01-2015 23:59:59"
+```
     
 Perhatikan kode di atas.
 Pada cara prosedural, `date()` mengembalikan string tanggal yang telah terformat, dari parameter berupa integer.
@@ -87,9 +87,22 @@ Membandingkan 2 tanggal menggunakan `DateTime` cukup mudah dan enak dibaca.
 
 Untuk mencari selisih antara 2 tanggal juga sangat mudah.
 
-<<(code/modern-php/datetime/datetime-diff.php)
+    ```php
+    <?php
+
+    $date1 = new DateTime('30 Jan 2015 15:00:00');
+    $date2 = new DateTime('2 Feb 2015 23:30:00');
+
+    $diff  = $date1->diff($date2);
+
+    echo "Selisih: {$diff->d} hari, {$diff->h} jam, {$diff->i} menit\n";
+    // Selisih: 3 hari, 8 jam, 30 menit
+
+    var_dump($diff);
+    // menampilkan properties lengkap dari $diff
+    ```
 
 I> `DateTime::diff()` mengembalikan object [DateInterval](http://php.net/manual/en/class.dateinterval.php) yang akan dibahas kemudian.
 
-{pagebreak}
+
 
