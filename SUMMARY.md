@@ -105,6 +105,19 @@
 * Software Engineering
     * [Design Patterns](40-design-patterns.md)
     * [SOLID Principle](50-prinsip-software-fleksibel.md)
+* Routing
+    * Pengertian
+    * Front Controller
+    * Middleware
+* Dependency Injection
+    * Pengertian
+    * Dependency Injection Container
+    * Service Locator
+    * Inversion of Control
+* Templating
+    * Pengertian
+    * Plain PHP Template
+    * Compiled PHP Template
 * Arsitektur User Interface
     * [MVC: Model-View-Controller](130-mvc.md)
     * [ADR: Action-Domain-Responder](150-adr.md)
