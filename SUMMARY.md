@@ -43,7 +43,7 @@
     * Variable Scope
     * Return Values
     * Closures
-* [Object Oriented Programming](30-object.md)
+* [Object Oriented Programming](80-object-oriented.md)
     * Class
     * Static Methods & Properties
     * Inheritance
@@ -52,14 +52,60 @@
     * Reflection
     * Traits
     * Magic Methods
-* [Design Patterns](40-design-patterns.md)
-* [Prinsip Software Fleksibel](50-prinsip-software-fleksibel.md)
-* [Composer](60-composer.md)
-* [PSR](70-psr.md)
-* [Dependency Injection](80-dependency-injection.md)
-* [Database](90-database.md)
-* [Templating](100-templating.md)
-* [Erros & Exception](110-errors-and-exception.md)
-* [SPL](120-spl.md)
-* [MVC: Model-View-Controller](130-mvc.md)
-* [Packages](140-packages.md)
+* [Iterator](90-iterator.md)
+    * Pengertian
+    * Generator
+* [Standard PHP Library](100-standard-php-library.md)
+    * Iterators
+    * Datastructures
+    * Interfaces
+    * Exceptions
+    * File Handling
+    * SPL Functions
+    * Array
+    * Observer
+* [Database](100-database.md)
+    * SQL
+    * Transaction
+    * PDO
+    * Database Abstraction
+* [Web](110-web.md)
+    * HTTP
+    * Sessions
+    * Parameter
+    * Form
+    * File Upload
+* [Security](120-security.md)
+    * Configuration
+    * Session Security
+    * Cross Site Scripting (XSS)
+    * Cross-Site Request Forgeries (CSRF)
+    * SQL Injection
+    * Remote Code Injection
+    * Email Injection
+    * Password Hashing API
+    * Input Filtering
+    * Output Escaping
+    * SSL
+* Community Standard
+    * [PSR](70-psr.md)
+    * [Composer](60-composer.md)
+    * [Packages](140-packages.md)
+* Debugging & Profiling
+    * Pengertian Debugging
+    * Debugging dengan xdebug
+    * Pengertian Profiling
+    * Profiling dengan xdebug
+* Development Environment
+    * Pengertian
+    * Vagrant
+    * Docker
+* Deploying
+    * Pengertian
+* Software Engineering
+    * [Design Patterns](40-design-patterns.md)
+    * [SOLID Principle](50-prinsip-software-fleksibel.md)
+* Arsitektur User Interface
+    * [MVC: Model-View-Controller](130-mvc.md)
+    * [ADR: Action-Domain-Responder](150-adr.md)
+    * [MVVM: Model-View-ViewModel](160-mvvm.md)
